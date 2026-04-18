@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "producer": "Java AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2026-04-06T13:33:52.003Z",
+    "analysisEndTime": "1970-01-01T00:00:00.000Z",
+    "privacyMode": "Protected",
+    "privacyModeHelpUrl": "https://aka.ms/appmod-privacy-mode",
+    "targetIds": [],
+    "targetDisplayNames": [],
+    "capabilities": [
+      "openjdk21"
+    ],
+    "os": [],
+    "id": "20260406190351",
+    "name": "Report_20260406190351",
+    "status": "running",
+    "domains": [
+      "security"
+    ],
+    "mode": "issue-only"
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 0,
+    "totalIncidents": 0,
+    "totalEffort": 0,
+    "charts": {
+      "severity": {
+        "mandatory": 0,
+        "optional": 0,
+        "potential": 0,
+        "information": 0
+      },
+      "category": {}
+    }
+  },
+  "projects": [
+    {
+      "path": ".",
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "mad",
+        "jdkVersion": "Unknown",
+        "frameworks": null,
+        "languages": [
+          "Java"
+        ],
+        "tools": null
+      },
+      "incidents": []
+    }
+  ],
+  "rules": {},
+  "security": [
+    {
+      "id": "CWE-543",
+      "title": "Use of Singleton Pattern Without Synchronization in a Multithreaded Context",
+      "category": "Concurrency & Synchronization",
+      "severity": "potential",
+      "description": "The product uses the singleton pattern when creating a resource within a multithreaded environment.",
+      "evidence": {
+        "files": [
+          "windows/runner/win32_window.cpp"
+        ],
+        "explanation": "WindowClassRegistrar::GetInstance() (lines 63-68) implements unsynchronized double-checked locking without any lock/mutex protection. Multiple threads can simultaneously pass the if (!instance_) check and create multiple instances of the singleton."
+      },
+      "storyPoint": 5
+    },
+    {
+      "id": "CWE-820",
+      "title": "Missing Synchronization",
+      "category": "Concurrency & Synchronization",
+      "severity": "potential",
+      "description": "The product utilizes a shared resource in a concurrent manner but does not attempt to synchronize access to the resource.",
+      "evidence": {
+        "files": [
+          "windows/runner/win32_window.cpp"
+        ],
+        "explanation": "Static int g_active_window_count (line 30) is incremented in Win32Window constructor (line 114) and decremented in destructor (line 118) without any synchronization. Race conditions can occur if multiple threads create/destroy Win32Window objects concurrently."
+      },
+      "storyPoint": 8
+    }
+  ]
+}
