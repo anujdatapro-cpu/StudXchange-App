@@ -1,0 +1,58 @@
+# 📱 StudXchange – College Marketplace App
+
+A modern Flutter-based marketplace app designed for college students to buy and sell items within campus.
+
+---
+
+## 🚀 Features
+
+- 🛒 Buy & Sell Items
+- 🔍 Smart Item Discovery
+- ❤️ Wishlist System
+- 🔔 Real-time Notifications
+- 💬 Chat between Buyer & Seller
+- 💸 Booking / Order System
+- ⭐ Reviews & Ratings
+- 📊 Smart Recommendations
+- 🎨 Premium UI (Dark + Light Mode)
+
+---
+
+## 🛠️ Tech Stack
+
+- Flutter (Frontend)
+- Firebase Firestore (Database)
+- Firebase Auth (Authentication)
+- Firebase Storage (Images)
+- Git & GitHub (Version Control)
+
+---
+
+## 📸 Screenshots
+
+(Add screenshots here later)
+
+---
+
+## 🎯 Project Goal
+
+To create a student-focused marketplace that:
+- Reduces unused items
+- Saves money for students
+- Enables easy campus trading
+
+---
+
+## 🧑‍💻 Author
+
+**Anuj**  
+Computer Engineering Student @ VIT Pune
+
+---
+
+## ⭐ Future Improvements
+
+- Payment Gateway Integration
+- Advanced Search Filters
+- AI-based Recommendations
+- Admin Dashboard
