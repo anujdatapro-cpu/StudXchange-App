@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
-  // 🔥 REAL FIREBASE LOGIN / SIGNUP
+  // REAL FIREBASE LOGIN / SIGNUP
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
 
