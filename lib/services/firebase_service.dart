@@ -22,7 +22,7 @@ class FirebaseService {
     }
   }
 
-  // 🔥 ADD ITEM
+  // ADD ITEM
   static Future<void> addItem({
     required String title,
     required String description,
@@ -54,7 +54,7 @@ class FirebaseService {
     }
   }
 
-  // 🔥 GET ALL ITEMS
+  // GET ALL ITEMS
   static Stream<List<ItemModel>> getItems() {
     return _db
         .collection('items')
@@ -109,7 +109,7 @@ class FirebaseService {
         });
   }
 
-  // 🔥 GET USER ITEMS
+  // GET USER ITEMS
   static Stream<List<ItemModel>> getUserItems(String email) {
     return _db
         .collection('items')
@@ -124,12 +124,12 @@ class FirebaseService {
         );
   }
 
-  // 🔥 DELETE ITEM
+  // DELETE ITEM
   static Future<void> deleteItem(String id) async {
     await _db.collection('items').doc(id).delete();
   }
 
-  // 🔥 ADD COMMENT
+  // ADD COMMENT
   static Future<void> addComment(
       String itemId, String userEmail, String comment, int rating) async {
     await _db.collection('comments').add({
@@ -141,7 +141,7 @@ class FirebaseService {
     });
   }
 
-  // 🔥 GET COMMENTS
+  // GET COMMENTS
   static Stream<List<CommentModel>> getComments(String itemId) {
     return _db
         .collection('comments')
@@ -228,7 +228,7 @@ class FirebaseService {
     await batch.commit();
   }
 
-  // 🔔 NOTIFICATIONS
+  // NOTIFICATIONS
   static Future<void> addNotification({
     required String userEmail,
     required String title,
