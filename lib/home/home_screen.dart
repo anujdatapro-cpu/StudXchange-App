@@ -240,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: Icon(Icons.favorite_outline, color: colors.accent),
             ),
           ),
-          // ✨ Theme Toggle Button (Sparkle)
+          // Theme Toggle Button (Sparkle)
           ValueListenableBuilder<bool>(
             valueListenable: isDarkMode,
             builder: (context, darkModeEnabled, _) {
