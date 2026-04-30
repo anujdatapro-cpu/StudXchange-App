@@ -154,7 +154,7 @@ class _BuyScreenState extends State<BuyScreen> {
       ),
       body: Column(
         children: [
-          // 🔍 Search Bar
+          // Search Bar
           Padding(
             padding: const EdgeInsets.all(12),
             child: TextField(
@@ -182,7 +182,7 @@ class _BuyScreenState extends State<BuyScreen> {
             ),
           ),
 
-          // 📦 Items
+          // Items
           Expanded(
             child: StreamBuilder<List<ItemModel>>(
               stream: FirebaseService.getItems(),
